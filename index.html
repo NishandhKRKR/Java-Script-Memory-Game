@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <!-- Player Name Modal -->
+    <div id="playerInput" class="modal">
+      <div class="modal-content">
+        <h2>Enter Your Name</h2>
+        <input type="text" id="playerNameInput" placeholder="Your name" />
+        <button id="startBtn">Start Game</button>
+      </div>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+      <h1>Memory Game</h1>
+      <p>Player: <span id="playerName">-</span></p>
+      <p>Moves: <span id="moveCounter">0</span></p>
+      <p>Time: <span id="timer">00:00</span></p>
+      <button id="restartBtn">Restart</button>
+    </div>
+
+    <!-- Game Board -->
+    <div id="gameBoard" class="game-board"></div>
+
+    <!-- Result Modal -->
+    <div id="result" class="modal hidden">
+      <div class="modal-content">
+        <h2>🎉 You Win!</h2>
+        <table>
+          <tr><td>Player</td><td id="resultName"></td></tr>
+          <tr><td>Moves</td><td id="resultMoves"></td></tr>
+          <tr><td>Time</td><td id="resultTime"></td></tr>
+        </table>
+        <button onclick="location.reload()">Play Again</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

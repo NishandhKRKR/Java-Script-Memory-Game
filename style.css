@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.container {
+  max-width: 850px;
+  width: 100%;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+  align-items: center;
+}
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 10px;
+}
+.card {
+  background-color: #eaffea;
+  border: 1px solid lightgreen;
+  height: 100px;
+  cursor: pointer;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(144, 238, 144, 0.3); 
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; 
+  display: none;
+  background-color: transparent;
+}
+.card.flipped img {
+  display: block;
+}
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 8px;
+}
+.hidden {
+  display: none;
+}
+table {
+  margin: 10px auto;
+  border-collapse: collapse;
+}
+td {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+}
+input#playerNameInput {
+    height: 39px;
+}
+button {
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+@media (max-width: 600px) {
+  .card {
+    height: 80px;
+  }
+}
